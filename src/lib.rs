@@ -11,6 +11,7 @@
     any(target_arch = "x86", target_arch = "x86_64")
 ))]
 extern crate vmm_sys_util;
+extern crate vmm_serde;
 
 #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
 mod x86;
