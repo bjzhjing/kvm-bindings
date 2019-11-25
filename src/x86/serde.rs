@@ -13,8 +13,6 @@ serde_ffi_fam_impl!(kvm_irq_routing, nr, kvm_irq_routing_entry);
 serde_ffi_fam_impl!(kvm_msrs, nmsrs, kvm_msr_entry);
 #[cfg(feature = "with-serde")]
 serde_ffi_fam_impl!(kvm_msr_list, nmsrs, __u32);
-#[cfg(all(feature = "with-serde", not(feature = "kvm-v4_14_0")))]
-serde_ffi_fam_impl!(kvm_nested_state, size, __u8);
 #[cfg(feature = "with-serde")]
 serde_ffi_fam_impl!(kvm_signal_mask, len, __u8);
 #[cfg(feature = "with-serde")]

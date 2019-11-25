@@ -3666,7 +3666,6 @@ fn bindgen_test_layout_kvm_vmx_nested_state() {
     );
 }
 #[repr(C)]
-#[derive(SerializeFfi, DeserializeFfiFam)]
 pub struct kvm_nested_state {
     pub flags: __u16,
     pub format: __u16,

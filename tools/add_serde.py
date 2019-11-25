@@ -11,6 +11,7 @@ BLACKLIST = [
     'kvm_ioapic_state ',
     'kvm_ioeventfd ',
     'kvm_lapic_state ',
+    'kvm_nested_state ',
     'kvm_ppc_pvinfo ',
     'kvm_xsave ',
     'union '
@@ -23,7 +24,6 @@ FAM_STRUCT_LIST = [
     'kvm_irq_routing ',
     'kvm_msrs ',
     'kvm_msr_list ',
-    'kvm_nested_state ',
     'kvm_reg_list ',
     'kvm_signal_mask ',
 ]
@@ -33,7 +33,7 @@ def println(line):
 
 
 def main():
-    with fileinput.input(files=glob('src/x86/bindings_*.rs'),
+    with fileinput.input(files=glob('../src/x86/bindings_*.rs'),
                          inplace=True, backup='.bak',) as src:
         for line in src:
             println(line)
