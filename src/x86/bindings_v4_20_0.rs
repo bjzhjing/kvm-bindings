@@ -1487,7 +1487,7 @@ fn bindgen_test_layout_kvm_regs() {
     );
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, SerializeFfi, DeserializeFfi)]
 pub struct kvm_lapic_state {
     pub regs: [::std::os::raw::c_char; 1024usize],
 }
