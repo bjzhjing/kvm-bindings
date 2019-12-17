@@ -2133,7 +2133,7 @@ fn bindgen_test_layout_kvm_msr_entry() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Default, SerializeFfi, DeserializeFfiFam)]
+#[derive(Clone, Debug, Default, SerializeFfi, DeserializeFfiFam)]
 pub struct kvm_msrs {
     pub nmsrs: __u32,
     pub pad: __u32,
