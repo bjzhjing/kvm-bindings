@@ -1952,6 +1952,7 @@ fn bindgen_test_layout_kvm_sregs() {
 }
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "with-serde", derive(Deserialize, Serialize))]
 pub struct kvm_fpu {
     pub fpr: [[__u8; 16usize]; 8usize],
     pub fcw: __u16,
