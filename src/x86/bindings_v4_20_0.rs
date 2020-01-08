@@ -2091,6 +2091,7 @@ fn bindgen_test_layout_kvm_fpu() {
 }
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "with-serde", derive(Deserialize, Serialize))]
 pub struct kvm_msr_entry {
     pub index: __u32,
     pub reserved: __u32,

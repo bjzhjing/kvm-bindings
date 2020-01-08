@@ -244,6 +244,13 @@ mod tests {
             let val_deser = serde_json::from_str::<kvm_fpu>(val_ser.as_str()).unwrap();
             assert_eq!(val, val_deser);
         }
+        {
+            // Test kvm_fpu ser/deser.
+            let val = kvm_msr_entry::default();
+            let val_ser = serde_json::to_string(&val).unwrap();
+            let val_deser = serde_json::from_str::<kvm_msr_entry>(val_ser.as_str()).unwrap();
+            assert_eq!(val, val_deser);
+        }
     }
 
     #[test]
